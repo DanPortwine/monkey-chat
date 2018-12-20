@@ -1,0 +1,768 @@
+:root{
+	--bodyColor:#24bf13;
+	--objectColor:#ffaa00;
+	--buttonColor:#ff5992;
+	--textColor:#2b3cff;
+}
+body{
+	background-color:var(--bodyColor);
+	font-family:arial;
+	color:var(--textColor);
+	font-size:18px;
+	margin:0px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+p{
+	margin:0px;
+}
+form{
+	margin:0px;
+}
+hr{
+	border:0.5px solid var(--textColor);
+}
+.alertBox{
+	position:fixed;
+	width:500px;
+	background-color:var(--buttonColor);
+	color:#fff;
+	font-weight:bold;
+	border:5px solid #3945cc;
+	border-radius:20px;
+	padding:10px;
+	text-align:center;
+	margin:0px;
+	margin-left:calc(50vw - 250px);
+	transform:translateY(-50%);
+	margin-top:50vh;
+	max-height:calc(100vh - 200px;);
+	z-index:10;
+	display:none;
+}
+.alertBody{
+	max-height:400px;
+}
+.closeAlert{
+	border:none;
+	border-radius:10px;
+	background-color:var(--objectColor);
+	padding:5px 15px;
+	font-size:15px;
+	font-weight:bold;
+	color:#3945cc;
+	outline:0;
+	margin-top:10px;
+}
+.closeAlert:active{
+	background-color:#dd8800;
+}
+.alertTextBox{
+	width:90%;
+	border:none;
+	border-radius:5px;
+	outline:0;
+	padding:5px;
+	margin-bottom:10px;
+	font-size:15px;
+}
+.alertTextarea{
+	border:none;
+	resize:none;
+	outline:0;
+	font-family:arial;
+	font-size:15px;
+	float:left;
+	border-radius:5px;
+	margin:5px auto;
+}
+.alertSelect{
+	padding:5px;
+	border-radius:5px;
+	outline:0;
+	width:150px;
+	margin-bottom:5px;
+}
+.alertNumberBox{
+	width:70px;
+	border:none;
+	border-radius:5px;
+	outline:0;
+	padding:5px;
+	font-size:15px;
+}
+#iconForm{
+	margin:0px;
+}
+.iconInput{
+	width:50px;
+	border-radius:5px;
+	border:none;
+	padding:5px;
+	outline:0;
+	margin-bottom:10px;
+	text-align:center;
+}
+#updateIcon{
+	display:none;
+}
+#stickerBoxInput{
+	width:auto;
+}
+#stickerChoice{
+	display:none;
+}
+.iconsList{
+	margin-bottom:10px;
+	overflow-y:auto;
+	max-height:400px;
+}
+.iconTile{
+	display:inline-block;
+	width:60px;
+	height:60px;
+	margin:0px 1px 3px 0px;
+	float:left;
+}
+#createAccountButton{
+	margin:0px;
+	border:none;
+	border-radius:20px;
+	padding:10px;
+	background-color:#0f0;
+	color:#fff;
+}
+.username{
+	font-size:30px;
+	margin:0px;
+	margin-top:8px;
+	margin-right:15px;
+	font-weight:bold;
+	float:right;
+}
+#userType{
+	font-size:15px;
+}
+#userIcon{
+	width:50px;
+	height:50px;
+	float:right;
+	margin-right:5px;
+}
+#userIcon:hover + #changeUserIconText{
+	display:block;
+}
+#changeUserIconText{
+	display:none;
+	margin-top:35px;
+	margin-right:-50px;
+	width:50px;
+	font-size:13px;
+	background-color:var(--buttonColor);
+	color:#fff;
+	float:left;
+	text-align:center;
+}
+.menuBar{
+	background-color:var(--objectColor);	
+	height:50px;
+	position:fixed;
+	width:100%;
+}
+#account{
+	margin-right:50px;
+	float:right;
+	width:auto;
+}
+.loginInput{
+	float:left;
+	margin-top:13px;
+	border:none;
+	margin-right:10px;
+	padding:5px;
+	border-radius:5px;
+	outline:0;
+}
+.menuButton{
+	float:left;
+	height:50px;
+	width:100px;
+	background-color:var(--objectColor);
+	color:#3945cc;
+	border:none;
+	font-size:17px;
+	font-weight:bold;
+	transition-duration:0.4s;
+	outline:0;
+}
+.menuButton:hover{
+	background-color:var(--buttonColor);
+	color:#fff;
+	border-bottom:3px #3945cc solid;
+	transition-duration:0.2s;
+}
+.menuButton:active{
+	background-color:#dd4882;
+}
+#logoutButton{
+	float:right;
+}
+.main{
+	width:900px;
+	margin:0px auto;
+	padding-top:70px;
+}
+.tabMenu{
+	margin:0px;
+	overflow:auto;
+}
+.tab{
+	float:left;
+	border-radius:10px 10px 0px 0px;
+	font-size:25px;
+	background-color:var(--buttonColor);
+	color:#fff;
+	border:none;
+	font-weight:bold;
+	padding:5px 10px;
+	border-bottom:2px #3945cc solid;
+	outline:0;
+	transition-duration:0.4s;
+}
+.tab:hover{
+	background-color:var(--objectColor);
+	color:#3945cc;
+	border-bottom:2px var(--objectColor) solid;
+	transition-duration:0.2s;
+}
+.tab:active{
+	background-color:#dd9900;
+}
+.mainInner{
+	background-color:var(--objectColor);
+	border-radius:0px 20px 20px 20px;
+	padding:10px;
+	overflow-y:auto;
+	height:calc(100vh - 150px);
+	overflow-x:hidden;
+}
+.title{
+	font-size:40px;
+	margin:0px;
+	margin-left:50px;
+	padding-top:3px;
+	right:100px;
+}
+.subtitle{
+	font-size:25px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.messages{
+	overflow-y:auto;
+	overflow-x:hidden;
+	margin:5px;
+	height:calc(100% - 100px);
+	font-size:20px;
+}
+.messages.privateMessages{
+	height:calc(100% - 140px);
+}
+#privateHeaderBar{
+	height:40px;
+	margin-bottom:10px;
+}
+#privateMenuButtons{
+	float:right;
+	margin-right:20px;
+}
+.privateMenuButton{
+	border:none;
+	border-radius:10px;
+	outline:0;
+	padding:2px 10px;
+	background-color:var(--objectColor);
+	color:#3945cc;
+	font-size:20px;
+	transition-duration:0.2s;
+	height:40px;
+	display:inline;
+}
+.privateMenuButton:hover{
+	background-color:var(--buttonColor);
+	color:#fff;
+	transition-duration:0.2s;
+}
+#privateTitle{
+	display:inline;
+	font-size:25px;
+	font-weight:bold;
+	margin-left:20px;
+}
+.messageBoxEntry{
+	width:850px;
+	margin:auto;
+}
+.sticker{
+	position:relative;
+	left:60px;
+	margin-top:-15px;
+	margin-bottom:5px;
+}
+.inlineSticker{
+	margin:0px 1px;
+	margin-bottom:-4px;
+	height:20px;
+}
+#stickersButton{
+	float:left;
+	height:30px;
+	width:100px;
+	background-color:var(--objectColor);
+	color:#3945cc;
+	border:none;
+	border-radius:20px 0px 0px 20px;
+	font-size:17px;
+	font-weight:bold;
+	transition-duration:0.4s;
+	outline:0;
+	margin-left:10px;
+}
+#stickersButton:hover{
+	background-color:var(--buttonColor);
+	color:#fff;
+	transition-duration:0.2s;
+}
+#stickersButton:active{
+	background-color:#dd4882;
+}
+.messageIcon{
+	height:30px;
+	margin:0px;
+	position:relative;
+	margin-right:10px;
+	float:left;
+}
+.messageContainer{
+	width:100%;
+	overflow-y:auto;
+	margin:0px 0px;
+}
+.time{
+	color:#fff;
+	display:inline-block;
+}
+.message{
+	display:inline-block;
+	width:100%;
+	overflow-y:auto;
+	background-color:#ff9900;
+}
+.messageAlt{
+	display:inline-block;
+	width:100%;
+	overflow-y:auto;
+	background-color:#ff8800;
+}
+.message:hover #reportButton{
+	display:inline-block;
+}
+.messageAlt:hover #reportButton{
+	display:inline-block;
+}
+.messageWarning{
+	margin-top:20px;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+.messagesNameBody{
+	display:inline-block;
+	margin-bottom:2px;
+	width:750px;
+	float:left;
+	margin-top:5px;
+	word-break:break-word;
+}
+.messageName{
+	font-weight:bold;
+	color:var(--textColor);
+	float:left;
+}
+.messageBody{
+	float:left;
+}
+.messageBot{
+	background-color:#f00;
+	float:left;
+	width:100%;
+}
+.messageNameBot{
+	font-weight:bold;
+	color:#000;
+	float:left;
+}
+.messageBodyBot{
+	font-weight:bold;
+	color:#000;
+	float:left;
+	margin-left:5px;
+}
+.messageMe{
+	background:linear-gradient(#ffd700,#ffdf35);
+	float:left;
+	width:100%;
+}
+.messageNameMe{
+	font-weight:bold;
+	color:#080;
+	float:left;
+}
+.messageBodyMe{
+	color:#2b0;
+	font-weight:bold;
+	float:left;
+	margin-left:5px;
+}
+.reportMessageButton{
+	position:relative;
+	float:right;
+	height:30px;
+	border:none;
+	background-color:#f00;
+	color:#fff;
+	display:none;
+	outline:0;
+}
+.reportMessageButton:hover{
+	background-color:#c00;
+}
+.reportMessageButton:active{
+	color:#ccc;
+}
+.confirmReportBox{
+	width:840px;
+	margin:0px auto;
+	height:30px;
+	font-size:18px;
+}
+.childListItem:hover  .reportActionButtons{
+	display:inline-block;
+}
+.confirmReport{
+	float:left;
+	margin-left:10px;
+	margin-top:5px;
+	margin-bottom:5px;
+	width:700px;
+	word-break:break-all;
+}
+.confirmReport.confirmBan{
+	width:660px;
+}
+#banLength{
+	width:60px;
+	float:left;
+	margin:0px;
+	height:30px;
+	margin-left:0px;
+}
+#bans{
+	margin-top:15px;
+	margin-bottom:15px;
+	max-height:93px;
+	overflow-y:auto;
+}
+.ban{
+	background-color:#f00;
+	color:#000;
+	padding:5px;
+	margin-top:1px;
+	height:20px;
+}
+.reporterName{
+	font-weight:bold;
+}
+.reportActionButtons{
+	float:right;
+	display:none;
+}
+.reportActionButton{
+	width:auto;
+	border:none;
+	background-color:#f00;
+	color:#fff;
+	height:30px;
+	margin:0px;
+	padding:5px;
+	outline:0;
+	float:left;
+	margin-left:2px;
+	cursor:pointer;
+}
+.messagesEntry{
+	overflow-y:auto;
+	width:720px;
+	display:inline-block;
+}
+.messageBodyEntry{
+	border:none;
+	outline:0;
+	font-family:arial;
+	font-size:15px;
+	float:left;
+	padding:2px;
+	word-break:break-word;
+	height:30px;
+	width:620px;
+	resize:none;
+}
+.messageBodyEntry.news{
+	height:auto;
+}
+#chatSearch{
+	width:500px;
+}
+#searchResetButton{
+	height:30px;
+	border:none;
+	outline:0;
+	background:none;
+	font-weight:bold;
+	margin-left:-120px;
+	cursor:pointer;
+	display:none;
+}
+#searchResetButton:hover{
+	font-weight:lighter;
+}
+#createChatButton{
+	height:30px;
+	margin:0px;
+	padding:2px 5px;
+	margin-left:5px;
+}
+.chatItem{
+	height:48px;
+	transition-duration:0.2s;
+	margin:0px auto;
+	cursor:pointer;
+}
+.chatItem:hover{
+	background-color:#ee9900;
+	transition-duration:0.2s;
+}
+.chatTitle{
+	font-size:35px;
+	font-weight:bold;
+	width:100%;
+	display:inline-block;
+	margin-left:20px;
+}
+.chatMembers{
+	float:right;
+	display:none;
+}
+.chatMember{
+	float:right;
+	width:48px;
+	margin-left:2px;
+}
+.chatMember:hover + .chatMemberDetail{
+	display:inline-block;
+}
+.chatMemberDetail{
+	color:#fff;
+	display:none;
+	position:relative;
+	float:right;
+	top:40px;
+	margin-left:calc(48px - 100%);
+}
+.chatMemberName{
+	background-color:var(--buttonColor);
+	position:absolute;
+	width:auto;
+	padding:2px 5px;
+	border-radius:5px;
+	float:right;
+	bottom:-35px;
+}
+.chatDivider{
+	margin:0px;
+	width:80%;
+	margin:0px auto;
+	border:none;
+	height:1px;
+	background:linear-gradient(to right,var(--objectColor),#3945cc,var(--objectColor));
+}
+.sendMessageButton{
+	float:left;
+	height:30px;
+	width:100px;
+	background-color:var(--objectColor);
+	color:#3945cc;
+	border:none;
+	border-radius:0px 20px 20px 0px;
+	font-size:20px;
+	font-weight:bold;
+	transition-duration:0.4s;
+	outline:0;
+}
+.sendMessageButton:hover{
+	background-color:var(--buttonColor);
+	color:#fff;
+	transition-duration:0.2s;
+}
+.sendMessageButton:active{
+	background-color:#dd4882;
+}
+#createRequestAlertBox{
+	display:none;
+}
+#userProfileDetails{
+	overflow-y:auto;
+	margin-right:100px;
+	width:100%;
+}
+#userProfileDetails:hover #deleteUser{
+	display:block;
+}
+#profilePageUserIcon{
+	display:inline-block;
+	float:left;
+}
+#bio{
+	margin:15px 200px;
+	text-align:center;
+	border-radius:50px;
+}
+#bioMesage{
+	margin:0px auto;
+	width:480px;
+}
+#profilePageUsername{
+	font-size:50px;
+	font-weight:bold;
+	color:#fff;
+	display:inline-block;
+	float:left;
+	margin-left:20px;
+	margin-top:5px;
+}
+.deleteChildAccount{
+	float:right;
+	margin:0px;
+}
+.deleteButton{
+	margin:0px;
+	height:30px;
+	border:none;
+	background-color:#f00;
+	color:#fff;
+	outline:0;
+}
+.childListItem{
+	margin:0px 20px;
+	overflow-y:auto;
+	transition-duration:0.4s;
+}
+.childListItem:hover{
+	background:linear-gradient(to right,var(--buttonColor),var(--buttonColor),var(--objectColor));
+	color:#fff;
+	transition-duration:0.2s;
+}
+.childListItem:hover #deleteUser{
+	display:block;
+}
+#newChildAlertBox{
+	display:none;
+}
+.pageButton{
+	border:none;
+	border-radius:10px;
+	background-color:var(--objectColor);
+	color:#3945cc;
+	font-size:18px;
+	padding:10px;
+	outline:0;
+	margin-bottom:10px;
+	transition-duration:0.4s;
+}
+.pageButton:hover{
+	background-color:var(--buttonColor);
+	color:#fff;
+	transition-duration:0.2s;
+}
+.pageButton:active{
+	background-color:#dd4882;
+}
+#editProfileButton{
+	border-radius:0px 0px 10px 10px;
+	float:right;
+}
+#createNewChildButton{
+	border:none;
+	border-radius:10px;
+	background-color:var(--objectColor);
+	color:#3945cc;
+	font-size:18px;
+	padding:10px;
+	outline:0;
+	margin-bottom:10px;
+	transition-duration:0.4s;
+}
+#createNewChildButton:hover{
+	background-color:var(--buttonColor);
+	color:#fff;
+	transition-duration:0.2s;
+}
+#createNewChildButton:active{
+	background-color:#dd4882;
+}
+.childAccountsListItems{
+	margin-top:5px;
+	display:inline-block;
+}
+#deleteUser{
+	float:right;
+	margin:0px;
+	display:none;
+}
+#deleteUserInput{
+	display:none;
+}
+#deleteUserButton{
+	height:30px;
+	border:none;
+	background-color:#f00;
+	color:#fff;
+	outline:0;
+	cursor:pointer;
+}
+#deleteChildUserButton{
+	border:none;
+	background-color:#f00;
+	color:#fff;
+	height:30px;
+	outline:0;
+	cursor:pointer;
+	margin:0px;
+	float:right;
+}
+#acceptFriendRequestButton{
+	border:none;
+	background-color:#0f0;
+	color:#fff;
+	height:30px;
+	outline:0;
+	cursor:pointer;
+	margin:0px;
+	float:right;
+}
+.newsImage{
+	max-width:865px;
+}
+.footer{
+	background-color:var(--objectColor);
+	height:250px;
+}
